@@ -1,0 +1,6 @@
+.footer {
+     height: 7rem;
+     position: fixed;
+     bottom: 0;
+     border-top: 5px solid var(--bg-color);
+}

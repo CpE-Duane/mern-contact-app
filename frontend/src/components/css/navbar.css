@@ -1,0 +1,12 @@
+nav {
+     height: 5rem;
+     position: fixed;
+     top: 0;
+     border-bottom: 5px solid var(--bg-color);
+}
+
+nav h3:hover,
+nav i:hover {
+     cursor: pointer;
+}
+

@@ -1,0 +1,17 @@
+.card {
+     box-shadow: 0 0 20px #db679b !important;
+     background-color: #e0cad4 !important;
+     border: none !important;
+}
+
+i:hover {
+     cursor: pointer;
+}
+
+input {
+     outline: none !important;
+}
+
+li {
+     background-color: #eddde4 !important;
+}
