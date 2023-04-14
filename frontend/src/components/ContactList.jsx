@@ -98,7 +98,7 @@ const ContactList = () => {
                                              <div className="card-body">
                                                   <div className="row d-flex align-items-center">
                                                        <div className="col-12 col-xl-5 col-xxl-4 text-center text-xl-start text-xxl-center">
-                                                            <img src={contact.photo} alt="" className='rounded-circle w-100' />
+                                                            <img src={contact.photo} alt="" className='rounded-circle contact-profile' />
                                                        </div>
                                                        <div className="col-12 col-xl-6 col-xxl-7 mt-3">
                                                             <ul className='list-group'>

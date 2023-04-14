@@ -3,6 +3,7 @@ import Layout from './layout/Layout';
 import { Link, useParams } from 'react-router-dom';
 import ContactService from './../service/ContactService';
 import Toast from '../toast/Toast';
+import './css/view-contact.css'
 
 const ViewContact = () => {
 
@@ -37,7 +38,7 @@ const ViewContact = () => {
 
                <div className="row mt-5 d-flex justify-content-center align-content-center">
                     <div className="col-12 col-lg-5 col-xl-4 text-center">
-                         <img src={contact.photo} alt="" className='rounded-circle w-50' />
+                         <img src={contact.photo} alt="" className='rounded-circle view-profile' />
                     </div>
                     <div className="col-12 col-lg-5 col-xl-4 mt-3 mt-lg-0">
                          <ul className='list-group'>

@@ -16,6 +16,28 @@ li {
      background-color: #eddde4 !important;
 }
 
-.card img {
+.contact-profile {
      height: 250px;
+     width: 100%;
 }
+
+@media screen and (min-width: 576px) {
+     .contact-profile {
+          width: 70%;
+     }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+     .contact-profile {
+          width: 60%;
+          height: 300px;
+     }
+}
+
+@media screen and (min-width: 1200px) {
+     .contact-profile {
+          height: 200px;
+          width: 100%;
+     }
+}
+
