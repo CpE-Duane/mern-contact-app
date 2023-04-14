@@ -15,3 +15,7 @@ input {
 li {
      background-color: #eddde4 !important;
 }
+
+.card img {
+     height: 250px;
+}
