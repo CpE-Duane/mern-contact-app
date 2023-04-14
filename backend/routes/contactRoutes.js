@@ -11,9 +11,6 @@ router.get("/get-contacts", ContactController.getContacts)
 router.get("/get-contact/:id", ContactController.getContact)
 router.delete("/delete-contact/:id", ContactController.deleteContact)
 
-
-router.get("/get-image")
-
 router.post("/upload-image", contactMiddleware.upload.single('photo'), ContactController.uploadImage)
 
 module.exports = router
