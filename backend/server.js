@@ -3,13 +3,14 @@ const dotenv = require("dotenv")
 const contactRoutes = require("./routes/contactRoutes")
 const connectDB = require('./config/db')
 const cors = require('cors')
+const corsOptions = require("./config/corsOptions")
 
 
 
 dotenv.config()
 connectDB()
 const app = express()
-app.use(cors())
+app.use(cors(corsOptions))
 app.use(express.json())
 
 const PORT = process.env.PORT
