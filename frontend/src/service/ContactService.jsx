@@ -1,5 +1,5 @@
 import axios from 'axios'
-const serverURL = "http://localhost:5000"
+const serverURL = "https://mern-contact-app-api.onrender.com"
 
 const getContacts = () => {
      return axios.get(`${serverURL}/api/contacts/get-contacts`)
