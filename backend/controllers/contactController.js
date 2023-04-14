@@ -170,7 +170,7 @@ const uploadImage = async (req, res) => {
                return;
           }
 
-          const imageUrl = `https://mern-contact-app-api.onrender.com/${req.file.filename}`;
+          const imageUrl = `https://mern-contact-app-api.onrender.com/images/${req.file.filename}`;
 
           res.status(201).send({
                success: true,
