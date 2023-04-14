@@ -1,29 +1,27 @@
-const multer = require('multer')
-const path = require('path')
+const multer = require('multer');
+const path = require('path');
 
-
+// Define the destination and filename for uploaded files
 const storage = multer.diskStorage({
-     destination: (req, file, cb) => {
-          cb(null, "./images")
-     },
-     filename: (req, file, cb) => {
-          cb(null, Date.now() + path.extname(file.originalname))
-     }
+  destination: (req, file, cb) => {
+    cb(null, "./images");
+  },
+  filename: (req, file, cb) => {
+    console.log(file);
+    cb(null, Date.now() + path.extname(file.originalname));
+  }
+});
 
-})
-
-const fileFilter = (req, file, cb) => {
-     if (file.mimetype.startsWith("image/")) {
-          cb(null, true);
-     } else {
-          cb(new Error("Only image files are allowed."));
-     }
-};
-
-const upload = multer({ storage: storage, fileFilter: fileFilter }).single("photo")
+// Initialize Multer with the storage option and no file type filter
+const upload = multer({
+  storage: storage,
+  fileFilter: (req, file, cb) => {
+    cb(null, true);
+  }
+}).single("photo");
 
 const contactMiddleware = {
-     upload
-}
+  upload
+};
 
-module.exports = contactMiddleware
+module.exports = contactMiddleware;
