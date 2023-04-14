@@ -204,6 +204,7 @@ const AddContact = () => {
                               <input
                                    type="file"
                                    id="file"
+                                   multiple={false}
                                    name='photo'
                                    className='d-none'
                                    accept="image/*"
