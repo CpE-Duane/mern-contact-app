@@ -206,6 +206,7 @@ const AddContact = () => {
                                    id="file"
                                    name='photo'
                                    className='d-none'
+                                   accept="image/*"
                                    onChange={handleFileSelect} />
                          </div>
                     </div>
