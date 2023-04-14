@@ -55,7 +55,7 @@ const updateContact = async (req, res) => {
                })
           }
 
-          const contact = await Contact.findOne({ email })
+          const contact = await Contact.findOne({ id })
           if (!contact) {
                return res.status(400).send({
                     success: false,
