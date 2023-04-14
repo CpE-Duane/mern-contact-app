@@ -30,7 +30,11 @@ const updateContact = (contactId, payload) => {
 }
 
 const uploadImage = (formData) => {
-     return axios.post(`${serverURL}/api/contacts/upload-image`, formData)
+     return axios.post(`${serverURL}/api/contacts/upload-image`, formData, {
+          headers: {
+               "Content-Type": "multipart/form-data"
+          }
+     })
 }
 
 
