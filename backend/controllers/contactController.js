@@ -96,8 +96,6 @@ const getContacts = async (req, res) => {
                })
           }
 
-          console.log(contacts)
-
           return res.status(200).send({
                success: true,
                message: "Contacts fetch successfully.",
@@ -172,7 +170,7 @@ const uploadImage = async (req, res) => {
                return;
           }
 
-          const imageUrl = `http://localhost:5000/images/${req.file.filename}`;
+          const imageUrl = `https://mern-contact-app-api.onrender.com/${req.file.filename}`;
 
           res.status(201).send({
                success: true,
@@ -186,32 +184,6 @@ const uploadImage = async (req, res) => {
                message: "Error while uploading image."
           })
      }
-}
-
-const getImage = async (req, res) => {
-     // try {
-     //      if (!req.file) {
-     //           res.status(400).send({
-     //                success: false,
-     //                message: 'No file uploaded',
-     //           });
-     //           return;
-     //      }
-
-     //      const imageUrl = `http://localhost:5000/images/${req.file.filename}`;
-
-     //      res.status(201).send({
-     //           success: true,
-     //           message: 'Image uploaded successfully',
-     //           imageUrl: imageUrl,
-     //      });
-     // } catch (error) {
-     //      console.error(error);
-     //      res.status(500).send({
-     //           success: false,
-     //           message: 'Error while uploading image',
-     //      });
-     // }
 }
 
 const ContactController = {
