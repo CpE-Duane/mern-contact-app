@@ -193,7 +193,6 @@ const ContactController = {
      getContact,
      deleteContact,
      uploadImage,
-     getImage
 }
 
 module.exports = ContactController
