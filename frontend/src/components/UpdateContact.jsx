@@ -231,7 +231,6 @@ const UpdateContact = () => {
                                    name='photo'
                                    className='d-none'
                                    accept="image/*"
-                                   multiple={false}
                                    onChange={handleFileSelect} />
                          </div>
                     </div>

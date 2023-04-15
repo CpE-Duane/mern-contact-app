@@ -10,18 +10,7 @@ const storage = multer.diskStorage({
   }
 });
 
-const imageFilter = (req, file, cb) => {
-  // Accept images only
-  if (!file.mimetype.startsWith("image/")) {
-    return cb(new Error("Only image files are allowed!"), false);
-  }
-  cb(null, true);
-};
-
-const upload = multer({
-  storage: storage,
-  fileFilter: imageFilter
-}).single('photo');
+const upload = multer({ storage: storage }).single('photo');
 
 const contactMiddleware = {
   upload
