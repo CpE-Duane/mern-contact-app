@@ -6,7 +6,7 @@ const contactSchema = yup.object().shape({
     email: yup.string().required("Email is required.").email("Invalid email."),
     address: yup.string().required("Address is required."),
     phone: yup.string().required("Phone is required."),
-    age: yup.number().required("Age is required."),
+    age: yup.number("Age is required").required("Age is required."),
     occupation: yup.string().required("Occupation is required."),
 })
 
