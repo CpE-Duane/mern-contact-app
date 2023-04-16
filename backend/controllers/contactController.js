@@ -20,7 +20,22 @@ const addContact = async (req, res) => {
                })
           }
 
-          const contact = await Contact.create(req.body)
+          const contactData = { 
+               firstName, 
+               lastName, 
+               email, 
+               age, 
+               phone, 
+               address, 
+               occupation
+          };
+          
+          if (req.file) {
+               const imageUrl = `https://mern-contact-app-api.onrender.com/images/${req.file.filename}`;
+               contactData.photo = imageUrl;
+          }
+
+          const contact = await Contact.create(contactData);
 
           if (!contact) {
                return res.status(400).send({
@@ -43,6 +58,7 @@ const addContact = async (req, res) => {
           })
      }
 }
+
 
 const updateContact = async (req, res) => {
      try {
@@ -162,7 +178,7 @@ const deleteContact = async (req, res) => {
 
 const uploadImage = async (req, res) => {
      try {
-          if (!req.file) {
+          if (!req.file && req.body.photo) {
                res.status(400).send({
                     success: false,
                     message: 'No file uploaded',
