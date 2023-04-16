@@ -12,7 +12,7 @@ const path = require('path');
 dotenv.config()
 connectDB()
 const app = express()
-app.use(cors(corsOptions))
+app.use(cors())
 app.use(express.json())
 
 const PORT = process.env.PORT

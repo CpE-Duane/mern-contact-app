@@ -49,6 +49,7 @@ const AddContact = () => {
 
                const { data } = await ContactService.uploadImage(formData)
                setImgURL(data.imageUrl)
+               Toast.successMsg(data.message)
 
           } catch (error) {
                Toast.errorMsg(error.response.data.message)
@@ -69,6 +70,7 @@ const AddContact = () => {
 
                const { data } = await ContactService.uploadImage(formData)
                setImgURL(data.imageUrl)
+               Toast.successMsg(data.message)
 
           } catch (error) {
                Toast.errorMsg(error.response.data.message)

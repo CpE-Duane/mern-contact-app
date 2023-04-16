@@ -20,20 +20,33 @@ const addContact = async (req, res) => {
                })
           }
 
-          const contactData = { 
-               firstName, 
-               lastName, 
-               email, 
-               age, 
-               phone, 
-               address, 
-               occupation
-          };
-          
-          if (req.file) {
-               const imageUrl = `https://mern-contact-app-api.onrender.com/images/${req.file.filename}`;
-               contactData.photo = imageUrl;
+          let photo;
+          let contactData
+          if (req.body.photo) {
+               contactData = {
+                    firstName,
+                    lastName,
+                    email,
+                    age,
+                    phone,
+                    address,
+                    occupation,
+                    photo: req.body.photo
+               }
+          } else {
+               contactData = {
+                    firstName,
+                    lastName,
+                    email,
+                    age,
+                    phone,
+                    address,
+                    occupation,
+               };
           }
+
+          console.log(contactData)
+
 
           const contact = await Contact.create(contactData);
 
